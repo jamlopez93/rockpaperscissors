@@ -1,0 +1,30 @@
+let result = window.prompt("Piedra? Papel? ó Tijera?");
+
+let arr = ["piedra", "papel", "tijera"];
+let randomPpt = arr[Math.floor(Math.random() * arr.length)]
+
+
+
+function ppt(){
+    return result.toLowerCase() === randomPpt ? "Empate"
+    : result.toLowerCase() === "piedra" && randomPpt === "tijera" ? "Victoria"
+    : result.toLowerCase() === "papel" && randomPpt === "piedra" ? "Victoria"
+    : result.toLowerCase() === "tijera" && randomPpt === "papel" ? "Victoria"
+    : "Derrota";
+}
+
+console.log(ppt());
+
+let score = [];
+score.push(ppt());
+console.log(score);
+
+
+
+/*
+function ronda (){
+    while (score["Victoria"] < 3 || score["Derrota"] < 3 || score ["Empate"] != 1) {
+            result
+        }
+}
+ronda();*/
